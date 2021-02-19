@@ -1,10 +1,53 @@
-Create a virtual environment with `python -m venv openvino_env`. Activate it
-with `openvino_env\Scripts\activate` on Windows or `source
-openvino_env/bin/activate` on Linux
+# Hand pose demo installation instructions
+
+Run the hand pose demo on your own webcam enabled computer.
+
+Note that this is a WIP demo!
+
+
+1. Clone the repository, go to the directory, and checkout the develop branch
 
 ```
-pip install --upgrade pip
-pip install openvino-2021.3.0-2525-...whl opencv-python jupyterlab
+git clone https://github.com/helena-intel/openvino-notebooks.git
+cd openvino-notebooks
+git checkout develop
+```
+
+2. Create and activate a virtual environment.
+
+```
+python -m venv openvino_env  # tip: on Windows, if you installed multiple Python versions, you can use py -3.7 to specify one
+```
+On Linux:
+```
+source openvino_env/bin/activate
+```
+On Windows:
+```
+openvino_env\Scripts\activate
+```
+
+3. Install the required Python packages
+
+Upgrade pip to ensure compatibility with newest OpenVINO versions. Replace OPENVINO_WHEEL with the filename to the openvino-2021.3 wheel
+
+```
+python -m pip install --upgrade pip
+pip install OPENVINO_WHEEL_FILE
+pip install Pillow opencv-python jupyterlab
+```
+
+4. Install the virtualenv kernel in Jupyter
+
+```
 python -m ipykernel install --user --name openvino_env
-jupyter lab
+```
+
+5. Start the demo!
+
+Note: if necessary, choose the openvino_env kernel (either when you get a popup or from the Kernel->Change Kernel menu)
+
+```
+cd hand_pose
+jupyter notebook hand_pose_video.ipynb  # jupyter lab also works
 ```
