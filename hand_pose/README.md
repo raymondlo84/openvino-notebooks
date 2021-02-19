@@ -16,7 +16,8 @@ git checkout develop
 ## 2. Create and activate a virtual environment.
 
 ```
-python -m venv openvino_env  # tip: on Windows, if you installed multiple Python versions, you can use py -3.7 to specify one
+# tip: on Windows, if you installed multiple Python versions, you can use py -3.7 to specify one
+python -m venv openvino_env  
 ```
 On Linux:
 ```
