@@ -2,7 +2,7 @@
 
 Run the hand pose demo on your own webcam enabled computer.
 
-Note that this is a WIP demo!
+Note that this is a WIP demo! Tested on Windows with Python 3.6 and 3.7
 
 
 1. Clone the repository, go to the directory, and checkout the develop branch
