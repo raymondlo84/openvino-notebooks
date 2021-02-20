@@ -52,3 +52,7 @@ Note: if necessary, choose the openvino_env kernel (either when you get a popup 
 cd hand_pose
 jupyter notebook hand_pose_video.ipynb  # jupyter lab also works
 ```
+
+# Troubleshooting
+
+If you get the error "libpython3.7m.so.1.0: cannot open shared object file: No such object or directory" install the required package with `sudo apt install libpython3.7-dev`
