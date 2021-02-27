@@ -32,6 +32,6 @@ ENV LD_LIBRARY_PATH /usr/local/lib
 #CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--TagRemovePreprocessor.remove_cell_tags",{'hide',}]
 #CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
 
-WORKDIR /home/jovyan/hand_pose_video
+WORKDIR /home/jovyan/hand_pose
 ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
 
