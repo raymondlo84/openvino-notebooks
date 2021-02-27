@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook && \
-    pip install voila opencv-python ipython==7.10 tornado==6.1 openvino
+    pip install voila opencv-python ipython==7.10 tornado==6.1 openvino Pillow
 
 # create user with a home directory
 ENV USER jovyan
