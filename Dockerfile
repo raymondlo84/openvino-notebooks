@@ -21,6 +21,8 @@ WORKDIR $HOME
 COPY --chown=jovyan:jovyan wheels /home/${USER}/wheels
 COPY --chown=jovyan:jovyan hand_pose /home/${USER}/hand_pose
 
+RUN jupyter nbextension install ipywebrtc --py --sys-prefix --symlink
+RUN jupyter nbextension enable ipywebrtc --py --sys-prefix
 
 USER jovyan
 
@@ -28,8 +30,6 @@ USER jovyan
 COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
 COPY --chown=jovyan:jovyan Dockerfile /home/${USER}
 
-RUN jupyter nbextension install ipywebrtc --py --sys-prefix --symlink
-RUN jupyter nbextension enable ipywebrtc --py --sys-prefix
 
 
 EXPOSE 8888
