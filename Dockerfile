@@ -21,9 +21,9 @@ WORKDIR $HOME
 
 USER jovyan
 
-COPY --chown=jovyan:jovyan hand_pose/models /home/${USER}/models
-COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
-COPY --chown=jovyan:jovyan Dockerfile /home/${USER}
+COPY --chown=jovyan:jovyan . /home/${USER}
+#COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
+#COPY --chown=jovyan:jovyan Dockerfile /home/${USER}
 
 EXPOSE 8888
 
