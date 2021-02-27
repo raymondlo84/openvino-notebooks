@@ -21,7 +21,7 @@ WORKDIR $HOME
 
 USER jovyan
 
-COPY --chown=jovyan:jovyan . /home/${USER}
+COPY --chown=jovyan:jovyan hand_pose /home/${USER}/hand_pose
 #COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
 #COPY --chown=jovyan:jovyan Dockerfile /home/${USER}
 
@@ -32,6 +32,6 @@ ENV LD_LIBRARY_PATH /usr/local/lib
 #CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--TagRemovePreprocessor.remove_cell_tags",{'hide',}]
 #CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
 
-WORKDIR /home/jovyan/
+WORKDIR /home/jovyan/hand_pose
 ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
 
