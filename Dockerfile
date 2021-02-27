@@ -28,6 +28,10 @@ USER jovyan
 COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
 COPY --chown=jovyan:jovyan Dockerfile /home/${USER}
 
+RUN jupyter nbextension install ipywebrtc --py --sys-prefix --symlink
+RUN jupyter nbextension enable ipywebrtc --py --sys-prefix
+
+
 EXPOSE 8888
 
 ENV LD_LIBRARY_PATH /usr/local/lib
