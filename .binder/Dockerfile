@@ -21,7 +21,7 @@ WORKDIR $HOME
 
 USER jovyan
 
-COPY --chown=jovyan:jovyan /home/lena/code/openvino-noebooks/hand_pose_video/models /home/${USER}/models
+COPY --chown=jovyan:jovyan models /home/${USER}/models
 COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
 COPY --chown=jovyan:jovyan Dockerfile /home/${USER}
 
