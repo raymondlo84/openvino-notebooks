@@ -21,8 +21,6 @@ WORKDIR $HOME
 COPY --chown=jovyan:jovyan wheels /home/${USER}/wheels
 COPY --chown=jovyan:jovyan hand_pose /home/${USER}/hand_pose
 
-RUN pip install wheels/openvino-2021.3.0-2525-cp37-cp37m-manylinux2014_x86_64.whl  wheels/openvino_dev-2021.3.0-2527-py3-none-any.whl
-
 
 USER jovyan
 
