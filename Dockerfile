@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook && \
-    pip install voila opencv-python ipython==7.10 tornado==6.1 openvino Pillow ipywebrtc
+    pip install voila opencv-python ipython==7.10 tornado==6.1 openvino Pillow 
 
 # create user with a home directory
 ENV USER jovyan
@@ -18,18 +18,16 @@ RUN adduser --disabled-password \
     jovyan
 WORKDIR $HOME
 
-COPY --chown=jovyan:jovyan wheels /home/${USER}/wheels
 COPY --chown=jovyan:jovyan hand_pose /home/${USER}/hand_pose
 
-RUN jupyter nbextension install ipywebrtc --py --sys-prefix --symlink
-RUN jupyter nbextension enable ipywebrtc --py --sys-prefix
+#RUN jupyter nbextension install ipywebrtc --py --sys-prefix --symlink
+#RUN jupyter nbextension enable ipywebrtc --py --sys-prefix
 
 USER jovyan
 
 
-COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
+#COPY --chown=jovyan:jovyan entrypoint.sh /home/${USER}
 COPY --chown=jovyan:jovyan Dockerfile /home/${USER}
-
 
 
 EXPOSE 8888
