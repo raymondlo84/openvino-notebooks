@@ -8,6 +8,7 @@ Note that this is a WIP demo! Tested on Windows with Python 3.6 and 3.7
 ```
 git clone https://github.com/helena-intel/openvino-notebooks.git
 cd openvino-notebooks
+cd 201-vision-monocular-depth-estimation
 git checkout develop
 ```
 
@@ -53,8 +54,6 @@ python -m ipykernel install --user --name openvino_env
 Note: if necessary, **choose the openvino_env kernel** (either when you get a popup or from the Kernel->Change Kernel menu)
 
 ```
-cd 201-vision-monocular-depth-estimation
-
 jupyter notebook 201-vision-monocular-depth-estimation.ipynb  # jupyter lab also works
 ```
 
