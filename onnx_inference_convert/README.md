@@ -1,8 +1,8 @@
 # ONNX/PyTorch/OpenVINO notebook installation instructions
 
-Note that this is a Work-in-progress demo! Tested on Windows and Linux with Python 3.7.
+Note that this is a Work-in-progress demo! Tested on Windows and Linux with Python 3.7. 
 
-See the [OpenVINO PIP installation guide](https://github.com/openvinotoolkit/openvino/blob/releases/2021/3/docs/install_guides/pypi-openvino-dev.md) for supported Python versions and operationg systems.
+Python 3.8 is not supported on Linux. See the [OpenVINO PIP installation guide](https://github.com/openvinotoolkit/openvino/blob/releases/2021/3/docs/install_guides/pypi-openvino-dev.md) for supported Python versions and operationg systems. 
 
 All required Python packages are installed in the notebook. It is highly recommended to make a virtual environment to run this notebook. The steps below explain how to create a virtual environment with Jupyter Lab.
 
