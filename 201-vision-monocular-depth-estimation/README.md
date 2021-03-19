@@ -38,9 +38,16 @@ openvino_env\Scripts\activate
 
 Upgrade pip to ensure compatibility with newest OpenVINO version and install the requirements for the notebook
 
+On Windows or Linux:
 ```
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+On macOS
+```
+python -m pip install --upgrade pip
+pip install -r requirements-mac.txt
 ```
 
 ## 5. Install the virtualenv kernel in Jupyter
