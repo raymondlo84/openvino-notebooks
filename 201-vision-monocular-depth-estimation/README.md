@@ -1,6 +1,4 @@
-# Hand pose demo installation instructions
-
-Run the hand pose demo on your own webcam enabled computer.
+# Monodepth demo installation instructions
 
 Note that this is a WIP demo! Tested on Windows with Python 3.6 and 3.7
 
