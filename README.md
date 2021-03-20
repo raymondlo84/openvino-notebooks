@@ -1,4 +1,4 @@
-# OpenVINO notebook installation instructions
+# OpenVINO Notebooks Installation Instructions
 
 Python 3.8 is not supported on Linux. See the [OpenVINO PIP installation guide](https://github.com/openvinotoolkit/openvino/blob/releases/2021/3/docs/install_guides/pypi-openvino-dev.md) for supported Python versions and operationg systems. 
 
