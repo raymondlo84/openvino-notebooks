@@ -21,4 +21,4 @@ jobs:
         pip install matplotlib youtube_dl Pillow nbval jupyter numpy==1.18.5 geffnet==0.9.8 fastseg onnx
     - name: Analysing the code with nbval
       run: |
-        py.test --nbval superresolution/superresolution.ipynb
+        python -m pytest --nbval superresolution/superresolution.ipynb
