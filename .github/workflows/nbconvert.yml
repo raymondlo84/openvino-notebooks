@@ -1,0 +1,33 @@
+name: nbconvert
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install wheel
+        python -m pip install -r requirements-dev.txt
+        python -m ipykernel install --user --name openvino_env
+    - name: Execute notebook
+      run: | 
+        python -m jupyter nbconvert --execute --to notebook --inplace **/super*.ipynb
+    - name: Commit files # commit executed notebook files
+      run: |
+        git config --local user.name "helena-intel"
+        git add \*.ipynb
+        git commit -m "Update notebooks with nbconvert version"
+    - name: Push changes # push the output folder to your repo
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+        force: false
