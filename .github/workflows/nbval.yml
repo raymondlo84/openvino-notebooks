@@ -25,3 +25,16 @@ jobs:
     - name: Analysing with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb
+    - name: Execute notebook
+      run: | python -m jupyter nbconvert --execute --to notebook --inplace *.ipynb
+      continue-on-error: true
+    - name: Commit files # commit executed notebook files
+      run: |
+        git config --local user.name "helena-intel"
+        git add .
+        git commit -m "Update notebooks with nbconvert version"
+    - name: Push changes # push the output folder to your repo
+      uses: ad-m/github-push-action@develop
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: false

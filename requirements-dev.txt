@@ -7,3 +7,5 @@ Pillow
 notebook
 youtube_dl 
 nbval
+ipython==7.10  # pin version to prevent async warnings
+
