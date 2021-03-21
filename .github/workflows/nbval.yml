@@ -18,7 +18,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install --quiet --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple openvino-dev
         pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
-        pip install matplotlib youtube_dl Pillow nbval jupyter numpy==1.18.5 geffnet==0.9.8 fastseg onnx
+        pip install matplotlib youtube_dl Pillow nbval jupyterlab numpy==1.18.5 geffnet==0.9.8 fastseg onnx
     - name: Analysing the code with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb
