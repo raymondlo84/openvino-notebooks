@@ -26,5 +26,4 @@ jobs:
     - name: Analysing with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb
-      continue-on-error: true
 
