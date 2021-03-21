@@ -24,4 +24,4 @@ jobs:
         python -m ipykernel install --user --name openvino_env
     - name: Analysing with nbval
       run: |
-        python -m pytest --nbval superresolution/superresolution.ipynb onnx_inference_convert/pytorch_onnx_openvino.ipynb
+        python -m pytest --nbval superresolution/superresolution.ipynb
