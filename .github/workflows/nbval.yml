@@ -4,23 +4,25 @@ on: [push]
 
 jobs:
   build:
-
-    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-18.04, macos-latest, windows-latest]
+        python: [3.6, 3.7]
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.7
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: ${{ matrix.python }}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple openvino-dev
-        pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
-        pip install matplotlib youtube_dl Pillow nbval jupyterlab numpy==1.18.5 geffnet==0.9.8 fastseg onnx
+        python -m pip install --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple openvino-dev
+        python -m pip install matplotlib youtube_dl Pillow nbval jupyterlab 
         python -m ipykernel install --user --name openvino_env
-
-    - name: Analysing the code with nbval
+    - name: Analysing with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb
