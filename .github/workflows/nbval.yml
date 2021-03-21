@@ -27,7 +27,7 @@ jobs:
         python -m pytest --nbval superresolution/superresolution.ipynb
     - name: Execute notebook
       run: | 
-        python -m jupyter nbconvert --execute --to notebook --inplace *.ipynb
+        python -m jupyter nbconvert --execute --to notebook --inplace **/*.ipynb
       continue-on-error: true
     - name: Commit files # commit executed notebook files
       run: |
