@@ -6,5 +6,7 @@ matplotlib
 Pillow
 notebook
 youtube_dl 
+pytube
 nbval
+nbstripout
 ipython==7.10  # pin version to prevent async warnings
