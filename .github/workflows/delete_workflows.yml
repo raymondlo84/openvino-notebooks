@@ -1,5 +1,12 @@
 name: Delete old workflow runs
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Number of days.'
+        required: true
+        default: 2
+
 jobs:
   del_runs:
     runs-on: ubuntu-latest
@@ -9,4 +16,4 @@ jobs:
         with:
           token: ${{ secrets.AUTH_PAT }}
           repository: ${{ github.repository }}
-          retain_days: 1
+          retain_days: ${{ github.event.inputs.days }}
