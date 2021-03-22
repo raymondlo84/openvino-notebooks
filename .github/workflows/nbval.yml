@@ -9,6 +9,10 @@ jobs:
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
         python: [3.6, 3.7]
+        experimental: [false]
+        include:
+        - python: 3.8
+          experimental: true
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -26,4 +30,5 @@ jobs:
     - name: Analysing with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation-image.ipynb
+  continue-on-error: ${{ matrix.experimental }}
 
