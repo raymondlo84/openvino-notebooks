@@ -9,11 +9,6 @@ jobs:
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
         python: [3.6, 3.7]
-        experimental: [false]
-        include:
-          - python: 3.8
-            os: windows-latest
-            experimental: true
 
     runs-on: ${{ matrix.os }}
 
