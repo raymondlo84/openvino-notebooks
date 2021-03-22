@@ -13,11 +13,8 @@ jobs:
         include:
         - python: 3.8
           experimental: true
-
     runs-on: ${{ matrix.os }}
-    
     continue-on-error: ${{ matrix.experimental }}
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 
@@ -29,8 +26,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install wheel
         python -m pip install -r requirements-dev.txt
-        python -m ipykernel install --user --name openvino_env
-      
+        python -m ipykernel install --user --name openvino_env    
     - name: Analysing with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation-image.ipynb
