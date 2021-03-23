@@ -8,12 +8,12 @@ jobs:
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'release.zip'
+        filename: 'openvino-notebooks-develop.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
-        artifacts: "release.zip"
+        artifacts: "openvino-notebooks-develop.zip"
         tag: openvino-notebooks-develop
         token: ${{ secrets.GITHUB_TOKEN }}
