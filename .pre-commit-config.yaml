@@ -9,4 +9,11 @@ repos:
     - id: nbqa-pyupgrade
       additional_dependencies: [pyupgrade==2.10.0]
       args: [--nbqa-mutate, --py36-plus]
+    - id: nbqa-flake8
+      additional_dependencies: [flake8==3.9.0]
+      args: [--nbqa-mutate]
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.3.9
+  hooks:
+    - id: nbstripout
 
