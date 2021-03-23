@@ -2,11 +2,16 @@
 --extra-index-url https://pypi.org/simple 
 openvino-dev
 
+# Packages that are used in the notebooks
 matplotlib 
 Pillow
-notebook
 youtube_dl 
 pytube
-nbval
-nbstripout
+
+# Jupyter
+notebook  # jupyterlab is recommended, notebook is the minimum requirement
 ipython==7.10  # pin version to prevent async warnings
+
+# Packages for testing/validating notebooks
+nbval
+nbqa[toolchain]
