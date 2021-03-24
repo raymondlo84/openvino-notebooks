@@ -8,8 +8,8 @@ Note that this is a WIP demo! Tested on Windows with Python 3.6 and 3.7
 ```
 git clone https://github.com/helena-intel/openvino-notebooks.git
 cd openvino-notebooks
-cd 201-vision-monocular-depth-estimation
 git checkout develop
+cd 201-vision-monocular-depth-estimation
 ```
 
 ## 2. Create a Virtual Environment.
