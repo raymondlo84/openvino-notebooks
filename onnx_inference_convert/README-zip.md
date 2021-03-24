@@ -3,7 +3,7 @@
 
 ## 1. Install the OpenVINO development package
 
-Follow the instructions on https://github.com/openvinotoolkit/openvino/blob/master/docs/install_guides/pypi-openvino-dev.md to install OpenVINO
+Follow the instructions on https://github.com/helena-intel/openvino-notebooks/blob/develop/onnx_inference_convert/README-install-openvino-dev.md to install OpenVINO
 
 ## 2. Activate the virtual environment
 
