@@ -27,17 +27,7 @@ Download the file from https://github.com/helena-intel/openvino-notebooks/releas
 
 Copy the zip file to the directory that contains the created virtual environment.
 
-Open a file browser to the current directory with
-
-On Windows (note the dot at the end of the command):
-```
-explorer .
-```
-
-On Ubuntu Linux, with Nautilus installed:
-```
-nautilus --browser .
-```
+> **NOTE**: On Windows, you can open a file browser to the current directory by typing `explorer .` in the command prompt.
 
 ## 5. Unzip the zip file.
 
