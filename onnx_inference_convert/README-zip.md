@@ -45,7 +45,9 @@ Unzip the zip file. It will create a directory in the current folder with the `o
 
 ## 6. Go to the directory with the notebook
 
-`cd openvino_notebooks\onnx_inference_convert`
+```
+cd openvino_notebooks\onnx_inference_convert
+```
 
 ## 7. Install the required packages to run the notebook
 
