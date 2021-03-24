@@ -41,29 +41,25 @@ nautilus --browser .
 
 ## 5. Unzip the zip file.
 
-On Windows:
-```
-cd openvino_notebooks\onnx_inference_convert
-```
+Unzip the zip file. It will create a directory in the current folder with the `openvino_notebooks`
 
-On Linux:
-```
-cd openvino_notebooks/onnx_inference_convert
-```
+## 6. Go to the directory with the notebook
 
-## 6. Install the required packages to run the notebook
+`cd openvino_notebooks\onnx_inference_convert`
+
+## 7. Install the required packages to run the notebook
 
 ```
 pip install -r requirements.txt
 ```
 
-## 7. Install the virtualenv kernel in Jupyter
+## 8. Install the virtualenv kernel in Jupyter
 
 ```
 python -m ipykernel install --user --name openvino_env
 ```
 
-## 8. Start the demo!
+## 9. Start the demo!
 
 ```
 jupyter lab
