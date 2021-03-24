@@ -3,7 +3,7 @@
 
 ## 1. Install the OpenVINO development package
 
-Follow the instructions on (correct openvino-dev pypi install link) to install OpenVINO
+Follow the instructions on https://github.com/openvinotoolkit/openvino/blob/master/docs/install_guides/pypi-openvino-dev.md to install OpenVINO
 
 ## 2. Activate the virtual environment
 
@@ -21,7 +21,7 @@ source openvino_env/bin/activate
 
 ## 3. Download the zip file with the notebook
 
-Download the file from (direct link to notebook zip file).
+Download the file from https://github.com/helena-intel/openvino-notebooks/releases/download/openvino-notebooks-develop/openvino-notebooks-develop.zip .
 
 ## 4. Copy the downloaded zip file
 
