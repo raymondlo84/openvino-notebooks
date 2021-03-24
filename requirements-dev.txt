@@ -16,6 +16,7 @@ geffnet==0.9.8
 fastseg
 onnx
 numpy==1.18.5
+ipywidgets
 
 # Jupyter
 notebook  # jupyterlab is recommended, notebook is the minimum requirement

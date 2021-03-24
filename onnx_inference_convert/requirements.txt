@@ -8,4 +8,5 @@ jupyterlab
 geffnet==0.9.8
 fastseg
 onnx
+ipywidgets
 numpy==1.18.5
