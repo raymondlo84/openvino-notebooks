@@ -1,5 +1,8 @@
 # ONNX/PyTorch/OpenVINO notebook installation instructions
 
+To run this notebook, you need to install [OpenVINO](https://github.com/helena-intel/openvino-notebooks/blob/develop/onnx_inference_convert/README-install-openvino-dev.md) 
+and the requirements for the notebook in requirements.txt. It is recommended to use a virtual environment and install a Jupyter kernel in the virtual environment. 
+
 
 ## 1. Install the OpenVINO development package
 
