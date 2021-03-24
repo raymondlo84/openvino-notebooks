@@ -1,6 +1,8 @@
+torch; sys_platform == 'darwin'
+torchvision; sys_platform == 'darwin'
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.5.1+cpu 
-torchvision==0.6.1+cpu 
+torch==1.5.1+cpu; sys_platform =='linux' or platform_system == 'Windows'
+torchvision==0.6.1+cpu; sys_platform =='linux' or platform_system == 'Windows'
 
 openvino-dev
 
@@ -22,3 +24,4 @@ ipython==7.10  # pin version to prevent async warnings
 # Packages for testing/validating notebooks
 nbval
 nbqa[toolchain]
+
