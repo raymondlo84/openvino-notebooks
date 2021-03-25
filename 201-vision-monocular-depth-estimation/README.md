@@ -39,7 +39,7 @@ openvino_env\Scripts\activate
 Upgrade pip to ensure compatibility with newest OpenVINO version and install the requirements for the notebook
 
 ```
-python -m pip install --upgrade pip
+python -m pip install --upgrade pip==20.1.1
 pip install -r requirements.txt
 ```
 
