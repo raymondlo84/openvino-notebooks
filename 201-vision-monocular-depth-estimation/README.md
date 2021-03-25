@@ -16,7 +16,7 @@ cd 201-vision-monocular-depth-estimation
 
 **NOTE:**
 * On Windows, if you installed multiple Python versions, you can use `py -3.7` instead of `python` to specify a version
-* On Linux or macOS you may need to type `python3` instead of `python`
+* On Linux or macOS you may need to type `python3` instead of `python` and you may need to install pip: https://pip.pypa.io/en/stable/installing/
 
 ```
 python -m pip install --user virtualenv 
@@ -52,12 +52,19 @@ python -m ipykernel install --user --name openvino_env
 
 ## 6. Start the demo!
 
-Note: if necessary, **choose the openvino_env kernel** (either when you get a popup or from the Kernel->Change Kernel menu)
-
 ```
-jupyter notebook 201-vision-monocular-depth-estimation.ipynb  # jupyter lab also works
+jupyter notebook 201-vision-monocular-depth-estimation.ipynb
 ```
+or
+```
+jupyter lab
+```
+If you use Jupyter Lab, select the notebook from the file browser on the left.
 
 # Troubleshooting
 
-On Linux, if you get the error "libpython3.7m.so.1.0: cannot open shared object file: No such object or directory" install the required package with `sudo apt install libpython3.7-dev`
+If you get an ImportError, check that you installed the Jupyter kernel in step 5. If necessary, select the kernel for your virtual environment
+in the *Kernel->Change Kernel* menu item.
+
+On Linux, if you get the error "libpython3.7m.so.1.0: cannot open shared object file: No such object or directory" install the required 
+package with `sudo apt install libpython3.7-dev`
