@@ -1,7 +1,4 @@
---index-url https://test.pypi.org/simple 
---extra-index-url https://pypi.org/simple 
 openvino-dev
-
 matplotlib 
 pytube
 Pillow
