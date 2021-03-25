@@ -1,6 +1,6 @@
 # Monodepth demo installation instructions
 
-Note that this is a WIP demo! Tested on Windows, macOS and Linux with Python 3.6 and 3.7
+_This notebook is a work in progress demo! It has been tested on Windows, macOS and Linux with Python 3.6 and 3.7_
 
 ## 1. Clone the repository, go to the directory, and checkout the develop branch
 
@@ -14,21 +14,25 @@ cd 201-vision-monocular-depth-estimation
 ## 2. Create a Virtual Environment.
 
 **NOTE:**
-* On Windows, if you installed multiple Python versions, you can use `py -3.7` instead of `python` to specify a version
-* On Linux or macOS you may need to type `python3` instead of `python` and you may need to install pip: https://pip.pypa.io/en/stable/installing/
+
+- On Windows, if you installed multiple Python versions, you can use `py -3.7` instead of `python` to specify a version
+- On Linux or macOS you may need to type `python3` instead of `python` and you may need to install pip: https://pip.pypa.io/en/stable/installing/
 
 ```
-python -m pip install --user virtualenv 
-python -m venv openvino_env  
+python -m pip install --user virtualenv
+python -m venv openvino_env
 ```
 
 ## 3. Activate the Virtual Environment
 
 On Linux:
+
 ```
 source openvino_env/bin/activate
 ```
+
 On Windows:
+
 ```
 openvino_env\Scripts\activate
 ```
@@ -42,7 +46,6 @@ python -m pip install --upgrade pip==20.1.1
 pip install -r requirements.txt
 ```
 
-
 ## 5. Install the virtualenv kernel in Jupyter
 
 ```
@@ -54,16 +57,19 @@ python -m ipykernel install --user --name openvino_env
 ```
 jupyter notebook 201-vision-monocular-depth-estimation.ipynb
 ```
+
 or
+
 ```
 jupyter lab
 ```
+
 If you use Jupyter Lab, select the notebook from the file browser on the left.
 
 # Troubleshooting
 
 If you get an ImportError, check that you installed the Jupyter kernel in step 5. If necessary, select the kernel for your virtual environment
-in the *Kernel->Change Kernel* menu item.
+in the _Kernel->Change Kernel_ menu item.
 
-On Linux, if you get the error "libpython3.7m.so.1.0: cannot open shared object file: No such object or directory" install the required 
+On Linux, if you get the error "libpython3.7m.so.1.0: cannot open shared object file: No such object or directory" install the required
 package with `sudo apt install libpython3.7-dev`
