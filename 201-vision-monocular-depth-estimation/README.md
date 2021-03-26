@@ -1,6 +1,23 @@
-# Monodepth demo installation instructions
+# Monodepth Demo
 
-_This notebook is a work in progress demo! It has been tested on Windows, macOS and Linux with Python 3.6 and 3.7_
+<img src="monodepth.png" width="850">
+
+
+Monocular Depth Estimation is the task of estimating scene depth using a single image. It has many potential applications in robotics, 3D reconstruction, medical imaging and autonomous systems. For this demo, we use a neural network model called MiDaS which was developed by the Intelligent Systems Lab at Intel. Check out their research paper to learn more.
+
+R. Ranftl, K. Lasinger, D. Hafner, K. Schindler and V. Koltun, "Towards
+Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot
+Cross-dataset Transfer," in IEEE Transactions on Pattern Analysis and Machine
+Intelligence, doi: 10.1109/TPAMI.2020.3019967.
+
+
+This notebook demonstrates Monocular Depth Estimation with the MidasNet model
+in OpenVINO.
+https://github.com/openvinotoolkit/open_model_zoo/blob/master/models/public/midasnet/midasnet.md
+
+# Installation Instructions
+
+_This notebook is a work in progress demo! It has been tested on Windows, macOS and Linux with Python 3.6 and 3.7._
 
 ## 1. Clone the repository, go to the directory, and checkout the develop branch
 
