@@ -6,10 +6,9 @@ Python 3.8 is not supported on Linux. See the [OpenVINO PIP installation guide](
 
 **NOTE:**
 * on Windows, if you installed multiple Python versions, you can use `py -3.7` to specify a specific version (in this case 3.7)
-* on Linux, you may need to type `python3` instead of `python` and you may need to install pip: https://pip.pypa.io/en/stable/installing/
+* on Linux, you may need to type `python3` instead of `python` and you may need to install pip: https://pip.pypa.io/en/stable/installing/ and/or python-venv (depending on your Linux distribution).
 
 ```
-python -m pip install --user virtualenv
 python -m venv openvino_env  
 ```
 
@@ -24,13 +23,13 @@ On Windows:
 openvino_env\Scripts\activate
 ```
 
-## 3. Upgrade pip and install Jupyter Lab
+## 3. Install the packages
 
-Upgrade pip to ensure compatibility with newest OpenVINO versions. 
+Install pip with this specific version to ensure compatibility with OpenVINO versions and dependencies. 
 
 ```
-python -m pip install --upgrade pip
-pip install jupyterlab
+python -m pip install --upgrade pip==20.1.1
+pip install jupyterlab openvino-dev
 ```
 
 ## 4. Install the virtualenv kernel in Jupyter
@@ -41,14 +40,19 @@ python -m ipykernel install --user --name openvino_env
 
 ## 5. Start the notebook!
 
-Note: if necessary, **choose the openvino_env kernel** (either when you get a popup or from the Kernel->Change Kernel menu)
-
+```
+jupyter notebook <notebook_filename>
+```
+or
 ```
 jupyter lab
 ```
 
-Select a notebook from the file browser at the left
+In Jupyter Lab, select a notebook from the file browser at the left
 
 # Troubleshooting
 
 On Linux, if you get the error "libpython3.7m.so.1.0: cannot open shared object file: No such object or directory" install the required package with `sudo apt install libpython3.7-dev`
+
+If you get an `ImportError`, doublecheck that you installed the kernel in step 4. If necessary, choose the openvino_env kernel from the *Kernel->Change Kernel* menu)
+
