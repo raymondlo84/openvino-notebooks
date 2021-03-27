@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
-        python: [3.6, 3.7, 3.8]
+        python: [3.6, 3.7]
 
     runs-on: ${{ matrix.os }}
 
@@ -26,5 +26,5 @@ jobs:
         python -m ipykernel install --user --name openvino_env    
     - name: Analysing with nbval
       run: |
-        python -m pytest --nbval superresolution/superresolution.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation-image.ipynb onnx_inference_convert/pytorch_onnx_openvino.ipynb
+        python -m pytest --nbval superresolution/superresolution.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation.ipynb onnx_inference_convert/pytorch_onnx_openvino.ipynb
 
