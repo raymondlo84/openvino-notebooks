@@ -25,4 +25,8 @@ ipython==7.10  # pin version to prevent async warnings
 # Packages for testing/validating notebooks
 nbval
 nbqa[toolchain]
+pre-commit
+
+# Pin versions to prevent issues
+importlib-metadata==3.7.3
 
