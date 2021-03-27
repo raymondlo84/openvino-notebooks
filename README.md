@@ -4,9 +4,9 @@ Python 3.8 is not supported on Linux. See the [OpenVINO PIP installation guide](
 
 ## 1. Create a virtual environment.
 
-**NOTE:**
-* on Windows, if you installed multiple Python versions, you can use `py -3.7` to specify a specific version (in this case 3.7)
-* on Linux, you may need to type `python3` instead of `python` and you may need to install pip: https://pip.pypa.io/en/stable/installing/ and/or python-venv (depending on your Linux distribution).
+> **NOTE:** 
+> - on Windows, if you installed multiple Python versions, you can use `py -3.7` to specify a specific version (in this case 3.7)
+> - on Linux, you may need to type `python3` instead of `python` and you may need to install pip: https://pip.pypa.io/en/stable/installing/ and/or python-venv (depending on your Linux distribution).
 
 ```
 python -m venv openvino_env  
