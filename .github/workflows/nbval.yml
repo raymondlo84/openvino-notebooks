@@ -24,12 +24,6 @@ jobs:
         python -m pip install wheel
         python -m pip install -r requirements-dev.txt
         python -m ipykernel install --user --name openvino_env    
-        python -m pip freeze > freeze-${{ matrix.os }}-${{ matrix.python }}.txt
-    - name: Archive pip freeze
-      uses: actions/upload-artifact@v2
-      with:
-        name: pip-freeze
-        path: freeze-${{ matrix.os }}-${{ matrix.python }}.txt
     - name: Analysing with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation.ipynb onnx_inference_convert/pytorch_onnx_openvino.ipynb
