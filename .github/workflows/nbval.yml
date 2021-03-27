@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, macos-latest, windows-latest]
-        python: [3.6,]
+        python: [3.6, 3.7]
 
     runs-on: ${{ matrix.os }}
 
@@ -23,7 +23,13 @@ jobs:
         python -m pip install --upgrade pip==20.1.1
         python -m pip install wheel
         python -m pip install -r requirements-dev.txt
-        python -m ipykernel install --user --name openvino_env    
+        python -m ipykernel install --user --name openvino_env
+        python -m pip freeze > pip-freeze-${{ github.sha }}-${{matrix.os}}-${{ matrix.python }}.txt
+    - name: Archive pip freeze
+      uses: actions/upload-artifact@v2
+      with:
+        name: pip-freeze
+        path: pip-freeze-${{ github.sha }}-${{matrix.os}}-${{ matrix.python }}.txt
     - name: Analysing with nbval
       run: |
         python -m pytest --nbval superresolution/superresolution.ipynb 201-vision-monocular-depth-estimation/201-vision-monocular-depth-estimation.ipynb onnx_inference_convert/pytorch_onnx_openvino.ipynb
