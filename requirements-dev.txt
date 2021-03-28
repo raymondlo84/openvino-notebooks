@@ -15,8 +15,12 @@ pytube
 geffnet==0.9.8
 fastseg
 onnx
-numpy==1.18.5
 ipywidgets
+
+# Tensorflow demo
+networkx>=1.11
+defusedxml>=0.5.0
+tensorflow>=2.2
 
 # Jupyter
 notebook  # jupyterlab is recommended, notebook is the minimum requirement
@@ -29,7 +33,4 @@ pre-commit
 
 # Pin versions to prevent issues
 importlib-metadata==3.7.3
-
-# Tensorflow demo
-networkx>=1.11
-defusedxml>=0.5.0
+numpy==1.18.5
