@@ -30,3 +30,6 @@ pre-commit
 # Pin versions to prevent issues
 importlib-metadata==3.7.3
 
+# Tensorflow demo
+networkx>=1.11
+defusedxml>=0.5.0
