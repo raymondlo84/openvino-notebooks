@@ -1,0 +1,37 @@
+torch==1.5.1; sys_platform == 'darwin'
+torchvision==0.6.1; sys_platform == 'darwin'
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.5.1+cpu; sys_platform =='linux' or platform_system == 'Windows'
+torchvision==0.6.1+cpu; sys_platform =='linux' or platform_system == 'Windows'
+
+openvino-dev
+
+# Packages that are used in the notebooks
+matplotlib 
+youtube_dl 
+pytube
+
+# ONNX demo
+geffnet==0.9.8
+fastseg
+onnx
+ipywidgets
+
+# Tensorflow demo
+networkx>=1.11
+defusedxml>=0.5.0
+tensorflow>=2.2
+
+# Jupyter
+notebook  # jupyterlab is recommended, notebook is the minimum requirement
+ipython==7.10  # pin version to prevent async warnings
+
+# Packages for testing/validating notebooks
+nbval
+nbqa[toolchain]
+pre-commit
+
+# Pin versions to prevent issues
+importlib-metadata==3.7.3
+numpy==1.18.5
+ipykernel==5.5.0

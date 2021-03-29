@@ -1,6 +1,5 @@
 openvino-dev
 matplotlib 
-pytube
 Pillow
 jupyterlab
 
